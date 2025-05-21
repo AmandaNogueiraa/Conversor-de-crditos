@@ -1,47 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conversor de Créditos</title>
   <link rel="stylesheet" href="styleconversor.css" />
 </head>
 <body>
-  <div class="container">
+  <main class="container">
     <h1>Conversor de Créditos</h1>
     <p class="subtitulo">Verifique quantos créditos você terá após a troca.</p>
 
     <div class="grupo">
-      <h2>Qual produto você possui?</h2>
-      <div class="botoes" id="origem-group">
-        <button data-type="ligacao">Ligação</button>
+      <h2>Qual produto possui?</h2>
+      <div id="origem-group" class="botoes">
         <button data-type="sms">SMS</button>
         <button data-type="sms_flash">Flash</button>
+        <button data-type="ligacao">Ligação</button>
       </div>
     </div>
 
     <div class="grupo">
       <h2>Quantos créditos deseja transferir?</h2>
-      <input type="number" id="quantidade" placeholder="Digite a quantidade de créditos" />
+      <input type="number" id="quantidade" placeholder="Digite a quantidade" />
     </div>
 
     <div class="grupo">
       <h2>Para qual produto deseja transferir?</h2>
-      <div class="botoes" id="destino-group">
-        <button data-type="ligacao">Ligação</button>
+      <div id="destino-group" class="botoes">
         <button data-type="sms">SMS</button>
         <button data-type="sms_flash">Flash</button>
+        <button data-type="ligacao">Ligação</button>
       </div>
     </div>
 
-    <div class="botoes-acao">
+    <div class="acoes">
       <button onclick="calcular()">CALCULAR</button>
       <button onclick="limpar()">LIMPAR</button>
     </div>
 
-    <div class="resultado" id="resultado"></div>
-  </div>
+    <div id="resultado" class="resultado"></div>
+  </main>
 
-  <script src="scriptconversor.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
