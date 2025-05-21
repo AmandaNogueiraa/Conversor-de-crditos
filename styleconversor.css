@@ -1,123 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #2ccf85, #12c2e9);
+  color: #ffffff;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 40px 20px;
   min-height: 100vh;
-  color: #333;
 }
 
 .container {
-  background: #ffffff;
-  padding: 2rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 500px;
-  text-align: center;
+  backdrop-filter: blur(10px);
 }
 
 h1 {
-  font-size: 2rem;
-  color: #222;
-  margin-bottom: 0.25rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #fff;
 }
 
 .subtitulo {
+  text-align: center;
   font-size: 1rem;
-  color: #666;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .grupo {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
 h2 {
   font-size: 1rem;
-  color: #333;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .botoes {
   display: flex;
   gap: 10px;
-  justify-content: center;
   flex-wrap: wrap;
 }
 
 .botoes button {
-  padding: 10px 20px;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  background: white;
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #333;
   font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .botoes button:hover {
-  background-color: #f0f0f0;
-}
-
-.botoes button.selected {
-  background-color: #ccc;
-}
-
-input[type="number"] {
-  padding: 10px;
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-.acoes {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.acoes button {
-  padding: 10px 20px;
-  background-color: white;
-  border: 2px solid #2ccf85;
-  border-radius: 10px;
-  color: #2ccf85;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.acoes button:hover {
-  background-color: #2ccf85;
+  background-color: #00c9a7;
   color: white;
 }
 
-.resultado {
-  background: #f9f9f9;
-  margin-top: 2rem;
-  padding: 1rem;
-  border-radius: 10px;
+.botoes button.selected {
+  background-color: #cfd8dc;
+  color: #222;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 14px;
   font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.botoes-acao {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+.botoes-acao button {
+  flex: 1;
+  padding: 12px 0;
+  margin: 0 5px;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #333;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.3s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.botoes-acao button:hover {
+  background-color: #00c9a7;
+  color: #fff;
+}
+
+.resultado {
+  margin-top: 2rem;
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 16px;
+  font-size: 1rem;
+  text-align: left;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
 }
 
 .resultado-linha {
-  margin: 0.5rem 0;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
-.resultado .valor {
-  color: #2ccf85;
+.valor {
   font-weight: bold;
+  color: #2ccf85;
 }
