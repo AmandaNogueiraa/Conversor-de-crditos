@@ -16,14 +16,14 @@ body {
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: 500px;
+  max-width: 560px;
   backdrop-filter: blur(10px);
 }
 
 h1 {
   font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
   text-align: center;
   color: #fff;
 }
@@ -31,12 +31,42 @@ h1 {
 .subtitulo {
   text-align: center;
   font-size: 1rem;
-  margin-bottom: 2rem;
-  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
 }
 
+/* Abas */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.tabs button {
+  flex: 1;
+  padding: 10px 0;
+  border: none;
+  border-radius: 12px;
+  background-color: #ffffff;
+  color: #333;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.tabs button:hover {
+  background-color: #00c9a7;
+  color: white;
+}
+.tabs button.selected {
+  background-color: #cfd8dc;
+  color: #222;
+}
+
+.hidden { display: none; }
+
 .grupo {
-  margin-bottom: 1.8rem;
+  margin-bottom: 1.4rem;
 }
 
 h2 {
@@ -75,7 +105,8 @@ h2 {
   color: #222;
 }
 
-input[type="number"] {
+input[type="number"],
+input[type="text"] {
   width: 100%;
   padding: 14px;
   font-size: 1rem;
@@ -88,10 +119,17 @@ input[type="number"] {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
+.hint {
+  display: inline-block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+}
+
 .botoes-acao {
   display: flex;
   justify-content: space-between;
-  margin-top: 1.5rem;
+  margin-top: 1.1rem;
 }
 
 .botoes-acao button {
@@ -115,7 +153,7 @@ input[type="number"] {
 }
 
 .resultado {
-  margin-top: 2rem;
+  margin-top: 1.4rem;
   background: #fff;
   color: #333;
   padding: 20px;
@@ -123,6 +161,7 @@ input[type="number"] {
   font-size: 1rem;
   text-align: left;
   box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  min-height: 20px;
 }
 
 .resultado-linha {
@@ -133,4 +172,14 @@ input[type="number"] {
 .valor {
   font-weight: bold;
   color: #2ccf85;
+}
+
+/* Mensagens de erro inline */
+.erro {
+  background: #ffe6e6;
+  color: #7a1f1f;
+  border: 1px solid #ffb3b3;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 600;
 }
