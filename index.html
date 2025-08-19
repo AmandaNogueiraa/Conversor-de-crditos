@@ -5,33 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Conversor de Créditos</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styleconversor.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
     <h1>Conversor de Créditos</h1>
     <p class="subtitulo">Verifique quantos créditos você terá após a troca.</p>
 
-    <div class="grupo">
-      <h2>Qual produto você possui?</h2>
-      <div class="botoes" id="origem-group">
-        <button data-type="ligacao">Ligação</button>
-        <button data-type="sms">SMS</button>
-        <button data-type="sms_flash">Flash</button>
+    <!-- Abas de modo -->
+    <div class="tabs" id="tabs-modo">
+      <button data-mode="creditos" class="selected">Créditos</button>
+      <button data-mode="dinheiro">Reais</button>
+    </div>
+
+    <!-- MODO: POR CRÉDITOS -->
+    <div data-section="creditos">
+      <div class="grupo">
+        <h2>Qual produto você possui?</h2>
+        <div class="botoes" id="origem-group">
+          <button data-type="ligacao">Ligação</button>
+          <button data-type="sms">SMS</button>
+          <button data-type="sms_flash">Flash</button>
+        </div>
+      </div>
+
+      <div class="grupo">
+        <h2>Quantos créditos deseja transferir?</h2>
+        <input type="number" id="quantidade" placeholder="Digite a quantidade de créditos" min="1" />
+      </div>
+
+      <div class="grupo">
+        <h2>Para qual produto deseja transferir?</h2>
+        <div class="botoes" id="destino-group">
+          <button data-type="ligacao">Ligação</button>
+          <button data-type="sms">SMS</button>
+          <button data-type="sms_flash">Flash</button>
+        </div>
       </div>
     </div>
 
-    <div class="grupo">
-      <h2>Quantos créditos deseja transferir?</h2>
-      <input type="number" id="quantidade" placeholder="Digite a quantidade de créditos" />
-    </div>
+ 
+    <div data-section="dinheiro" class="hidden">
+      <div class="grupo">
+        <h2>Quanto dinheiro deseja converter?</h2>
+        <input
+          type="text"
+          id="valor-reais"
+          inputmode="decimal"
+          placeholder="Ex.: 705,00"
+          autocomplete="off"
+        />
+        <small class="hint">Use vírgula para centavos (p.ex. 705,00).</small>
+      </div>
 
-    <div class="grupo">
-      <h2>Para qual produto deseja transferir?</h2>
-      <div class="botoes" id="destino-group">
-        <button data-type="ligacao">Ligação</button>
-        <button data-type="sms">SMS</button>
-        <button data-type="sms_flash">Flash</button>
+      <div class="grupo">
+        <h2>Para qual produto deseja converter?</h2>
+        <div class="botoes" id="destino-group-dinheiro">
+          <button data-type="ligacao">Ligação</button>
+          <button data-type="sms">SMS</button>
+          <button data-type="sms_flash">Flash</button>
+        </div>
       </div>
     </div>
 
@@ -43,6 +76,6 @@
     <div class="resultado" id="resultado"></div>
   </div>
 
-  <script src="scriptconversor.js"></script>
+  <script src="conversor.js"></script>
 </body>
 </html>
